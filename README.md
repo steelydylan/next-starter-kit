@@ -11,6 +11,9 @@ This repository supports followings
 
 ## Commands
 
-- `npm run dev` => development
-- `npm run build` => production
+When you are developing next.js application, type `npm run dev`
+
+## Hosting with Netlify
+
+`npm run export`
 
