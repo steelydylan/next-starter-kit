@@ -1,5 +1,6 @@
-import React from 'react';
+import * as React from 'react';
 import Layout from '../components/layout';
+import Button from '@material-ui/core/Button';
 import Link from 'next/link';
 
 export default class Index extends React.Component {
@@ -11,7 +12,7 @@ export default class Index extends React.Component {
   render() {
     return(<Layout>
       About Page!
-      <Link href="/">index</Link>
+      <Link href="/"><Button variant="outlined">index</Button></Link>
     </Layout>)
   }
 }

@@ -5,10 +5,8 @@ import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import InputBase from '@material-ui/core/InputBase';
 import { fade } from '@material-ui/core/styles/colorManipulator';
-import withRoot from '../lib/material-ui/withRoot';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
-import Router from 'next/router';
 import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({
@@ -71,8 +69,11 @@ const styles = theme => ({
   },
 });
 
-class Header extends React.Component {
+type HeaderProps = {
+  classes: {[key: string]: string }
+}
 
+class Header extends React.Component<HeaderProps> {
 
   render() {
     const { classes } = this.props;
