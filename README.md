@@ -11,6 +11,6 @@ This repository supports followings
 
 ## Commands
 
-`npm run dev` => development
-`npm run build` => production
+- `npm run dev` => development
+- `npm run build` => production
 
