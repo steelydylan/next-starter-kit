@@ -1,10 +1,19 @@
 import * as React from 'react';
 import { MuiThemeProvider } from '@material-ui/core/styles';
-import getPageContext from './getPageContext'
+import getPageContext from './getPageContext';
 
-export default function withRoot(Component: React.ReactNode) {
-  return class WithRoot extends React.Component {
-    pageContext = null
+type PageContext = {
+  theme: any,
+  sheetsManager: any
+}
+
+type WithRootProps = {
+  pageContext: PageContext
+}
+
+export default function withRoot(Component) {
+  return class WithRoot extends React.Component<WithRootProps> {
+    pageContext = null;
 
     componentWillMount() {
       this.pageContext = this.props.pageContext || getPageContext()

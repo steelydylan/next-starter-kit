@@ -12,7 +12,11 @@ const withJssProvider = (App, pageContext, props) => (
   </JssProvider>
 );
 
-export default class MyDocument extends Document {
+type DocumentProps = {
+  styleTags: React.ReactNode[]
+}
+
+export default class MyDocument extends Document<DocumentProps> {
   static getInitialProps ({ renderPage }) {
     const sheet = new ServerStyleSheet() // for styled-components
     const pageContext = getPageContext() // for material-ui
