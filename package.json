@@ -8,6 +8,8 @@
     "dev": "next -p 8080",
     "build": "next build",
     "start": "next start",
+    "lambda": "netlify-lambda build functions",
+    "lambda-local": "netlify-lambda serve functions",
     "export": "npm run build && next export"
   },
   "author": "",
@@ -15,6 +17,7 @@
   "dependencies": {
     "@material-ui/core": "^3.6.1",
     "@material-ui/icons": "^3.0.1",
+    "netlify-lambda": "^1.1.0",
     "next": "^7.0.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
